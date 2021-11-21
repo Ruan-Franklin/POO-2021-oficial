@@ -1,0 +1,2 @@
+language = "bash"
+run ="mcs -out:main.exe 'Aula01/area_do_triangulo.cs'; mono main.exe"

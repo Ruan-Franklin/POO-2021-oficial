@@ -1,2 +1,2 @@
 language = "bash"
-run ="mcs -out:main.exe 'Triangulo_objeto/Triangulo_objeto.cs'; mono main.exe"
+run ="mcs -out:main.exe 'Triangulo_encapsulado/Triangulo_encapsulado.cs'; mono main.exe"

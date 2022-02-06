@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfLaboratorio xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Laboratorio>
+    <Id>1</Id>
+    <Descricao>Lab01</Descricao>
+  </Laboratorio>
+  <Laboratorio>
+    <Id>2</Id>
+    <Descricao>Lab02</Descricao>
+  </Laboratorio>
+</ArrayOfLaboratorio>

@@ -33,7 +33,7 @@ class MainClass{
     Console.WriteLine(w);
   }
   Console.WriteLine("Gerentes: ")
-  foreach (Gerente w in x.Gerentes){
+  foreach(Gerente w in x.Gerentes){
     Console.WriteLine(w);
   }
   
@@ -45,6 +45,7 @@ class Empresa{
   }
   public List <Funcionario> Funcs{get => funcs;}
   public List <Gerente> Gerentes{
+    get{
     List <Gerente> gs = new List <Gerente>();
     foreach(Funcionario f in funcs){
       if(f is Gerente) gs.Add(f as Gerente);
@@ -53,8 +54,9 @@ class Empresa{
     }
     
   }
-    
 }
+}
+    
 class Funcionario{
   private string nome;
   protected decimal salarioBase;
@@ -89,6 +91,5 @@ class Gerente : Funcionario { //Fazendo uma herança
   public override decimal GetSalario(){
     return base.GetSalario() + gratificação;
   }
-
-} 
+ 
 }

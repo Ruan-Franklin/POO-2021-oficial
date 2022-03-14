@@ -1,0 +1,173 @@
+                      Objetivos
+
+-Compreender os conceitos básicos de POO em Python
+
+-Definição de Classes
+-Atributos
+-Métodos Especiais
+-Encapsulamento
+
+
+                Classes
+
+-Classes definem tipos de objetos e modelam o mundo real
+-No Python, "tudo" é classe: números, textos, funções, métodos e 
+
+módulos são instâncias de classes.
+
+   import math
+   def dobro(x):
+     return 2*x;
+   x=16
+   y=math.sqrt(x)
+   s="Raiz Quadrada"       
+   print(type(x))              <class 'int'>
+   print(type(y))              <class 'float'>
+   print(type(s))              <class 'str'>
+   print(type(dobro))          <class 'function'>
+   print(type(math.sqrt))      <class 'builtin_function_or_method'>
+   print(type(math))          
+
+
+               Definição de Classes
+
+-Classes são definidas com a palavra reserva class
+-Classe Triângulo em Python
+ -pass é usado para definir uma classe "vazia"
+
+    class Triangulo:
+      pass
+  
+-Instâncias da classe Triângulo
+ 
+  x = Triangulo()
+  y = Triangulo()
+  print(x)
+  print(y)          #false
+  print(x==y)
+  print(type(x))
+   
+                  Atributos dinâmicos
+
+
+-Python permite que atributos sejam definidos dinâmicamente em um 
+
+objeto
+ -"x" é uma instância de classe Triângulo e possui os atributos base 
+
+e altura
+ -"y" é uma instância de classe Triângulo, mas não possui os 
+
+atributos base e altura.
+
+
+                 class Triangulo:
+                   pass
+                 
+                 x=Triangulo()
+                 x.base=10
+                 x.altura=20
+                 print(x.base*x.atura/2)
+                 y=Triangulo()
+
+
+                Método ____init___ e atributos
+
+
+-O método ___init___ é o método usado para iniciar as instâncias e 
+
+comumente usado para definir os atributos da classe
+ -Todos os métodos em Python devem receber um parâmetro self
+
+   class Triangulo:
+     def __init__ (self,base,altura):
+      self.base=base-base
+      self.altura=altura
+      
+     def area(self):                   #10
+       return self.base*self.atura/2   #20
+                                       #100
+     x=Triangulo(10,20)
+      print(x.base)
+      print(x.altura)
+      print(x.area())
+
+
+               Método ____str___
+
+- O método ___str___ é o método usado para retornar um texto com 
+
+informações sobre o objeto
+
+
+  class Triangulo:
+    def __init__(self, base,altura):
+      self.base=base
+      self.altura=altura
+
+   def __str__ (self):
+     return "Triangulo com base = " + str(self.base) + " e altura = 
+
+" + str(self.altura)
+
+  def area(self):
+    return self.base * self.atura/2
+    
+ x=Triangulo(10,20)
+ print(x)        #Triangulo com base = 10 e altura = 20
+
+
+
+                    Encapsulamento
+
+
+
+- O encapsulamento, no Python, é realizado com o uso do caractere 
+
+underscore "_" no início do nome do atributo
+ -Públicos: não usa underscore
+ -Protegidos: um underscore
+ -Privados: dois underscores
+
+ class Exemplo:
+   def __init__ (self):
+     self.atributo01="público"
+     self._atributo02="protegido"
+     self._atributo03="privado"
+
+x=Exemplo()
+print(x.atributo01) #público   
+print(x._atributo02)  #protegido
+#print(x.)_atributo03) #privado
+
+
+
+                 Triângulo em Python
+
+
+class Triangulo:
+  def __init__(self, base=0, altura=0):
+    self.__base=base if base >0 else 0
+    self.__altura = altura if altura > 0 else 0
+   
+  def __str__ (self):
+    return "Triângulo com base = " + str(self.__base) + "e altura = 
+
+" + str(self.__altura))
+
+  def area(self): return self.__base*self.__altura/2
+  
+  def set_base(self, base):
+    if(base>): self._base=base
+
+  def get_base(self): return self.__base
+  def set_altura(self,alturaa):
+    if(altura>0): self.__altura=altura
+  
+  def get_altura(self): return self ._altura
+
+
+
+
+
+       

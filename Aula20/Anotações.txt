@@ -168,6 +168,9 @@ class Triangulo:
 
 
 
+             Anotações de video-aula
 
+Em Python tudo é classe: números, textos, funções, métodos e módulos são instâncias de classe.
 
+O método __str__ é equivalente ao ToString do C#
        
